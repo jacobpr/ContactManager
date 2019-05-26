@@ -1,0 +1,79 @@
+
+<!-- 
+
+This is just a temporary version of the html based on Mr. Leinecker's LAMP demo.
+This is just being used for testing the java / php and will be replaced.
+
+-->
+
+<html>
+<head>
+	<title>Contact Manager Test Page</title>
+	<script type="text/javascript" src="js/code.js"></script>
+    <link href="css/styles.css" rel="stylesheet">	
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+
+<body>
+
+<h1 id="title">Contact Manager Test Page</h1>
+
+<div id="deleteContactDiv">
+    <button type="button" id="deleteContact" class="buttons" onclick="deleteContact(3);"> Delete Contact </button><br />
+    <span id="deleteContactResult"></span>
+    <span id="contactFirst"></span>
+</div>
+<br />
+
+    <input type="text" id="lastSearchText" placeholder="search last">
+    <button type="button" id="searchLast" class="buttons" onclick="searchContactsByLast();"> search </button><br />
+    <span id="searchContactsByLastResult"></span>
+
+	<span id="contactsList"></span>
+
+<div id="contactsDiv">
+    <button type="button" id="getContacts" class="buttons" onclick="getContacts();"> Get Contacts </button><br />
+    <span id="getContactsResult"></span>
+    <span id="contactFirst"></span>
+</div>
+<br />
+
+ <input type="text" id="loginText" placeholder="login">
+    <input type="text" id="passwordText" placeholder="password">
+    <button type="button" id="addUser" class="buttons" onclick="addUser();"> Register </button><br />
+    <span id="addUserResult"></span>
+
+
+<div id="loginDiv">
+	<span id="inner-title">PLEASE LOG IN</span>
+	<input type="text" id="loginName" placeholder="Username" /><br />
+	<input type="password" id="loginPassword" placeholder="Password"/><br />
+	<button type="button" id="loginButton" class="buttons" onclick="loginUser();"> Do It </button>
+	<span id="loginResult"></span>
+</div>
+<div id="loggedInDiv" style="display:none; visibility:hidden;">
+	<span id="userName"></span><br />
+	<button type="button" id="logoutButton" class="buttons" onclick="logoutUser();"> Log Out </button>
+</div>
+<div id="accessUIDiv" style="display:none; visibility:hidden;">
+	<br />
+
+	<input type="text" id="searchText" placeholder="Contact To Search For"/>
+	<button type="button" id="searchContactsButton" class="buttons" onclick="searchContacts();"> Search Contact </button><br />
+	<span id="contactsSearchResult"></span>
+	<select id="contactsList" style="display:none; visibility:hidden;">
+		<!-- <option value="volvo">Volvo</option> -->
+	</select><br /><br />
+
+	<input type="text" id="lastText" placeholder="last">
+    <input type="text" id="firstText" placeholder="first">
+    <input type="text" id="emailText" placeholder="email">
+    <input type="text" id="phoneText" placeholder="phone">
+    <input type="text" id="addressText" placeholder="address">
+	
+	<button type="button" id="addColorButton" class="buttons" onclick="addContact();"> Add Color </button><br />
+	<span id="addContactResult"></span>
+</div>
+
+</body>
+</html>
